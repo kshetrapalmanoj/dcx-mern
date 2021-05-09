@@ -109,7 +109,7 @@ class Login extends Component {
                       onChange={this.passwordHandler}
                     />
                     <Link to="/reset">
-                      <p className="text-info text-center mt-md-2 mr-md-0">
+                      <p className="text-info text-right mt-md-2 mr-md-0">
                         Reset Password
                       </p>
                     </Link>

@@ -27,6 +27,9 @@ class NewPassword extends Component {
         "Password must be at least 8 characters with at least one lowercase,uppercase and two special characters";
     }
 
+    if (this.state.confirmPassword!==this.state.password) {
+      error = "Passwords do not match";
+    }
     if (error) {
       this.setState({
         errrorMessage: error,
@@ -136,7 +139,7 @@ class NewPassword extends Component {
                       }
                     />
                   </div>
-                  <div className="text-danger">{this.state.passwordError}</div>
+                  <div className="text-danger">{this.state.error}</div>
                   <br></br>
 
                   <div>
@@ -152,7 +155,7 @@ class NewPassword extends Component {
                       }
                     />
                   </div>
-                  <div className="text-danger">{this.state.passwordError}</div>
+                  <div className="text-danger">{this.state.error}</div>
                   <br></br>
 
                   <div className="text-center">

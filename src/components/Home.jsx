@@ -11,6 +11,7 @@ import ForgotPassword from "./ForgotPassword";
 import NewPassword from "./NewPassword";
 import React, { useState, useCallback, useEffect } from "react";
 import axios from "axios";
+import Not_Found from "./Not_Found";
 
 export const UserContext = React.createContext();
 
@@ -81,6 +82,7 @@ function Home() {
             <LoginGuardRoute exact path="/about" component={About} />
             <LoginGuardRoute path="/register" component={Register} />
             <LoginGuardRoute path="/contact" component={Contact} />
+            <Route component={Not_Found} />
           </Switch>
         </div>
       </Router>
